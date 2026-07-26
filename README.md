@@ -111,6 +111,8 @@ After completing the preprocessing workflow:
 
 The resulting dataset is clean, consistent, and ready for business analytics, dashboard creation, statistical modelling, or machine learning applications.
 
+<img width="1108" height="483" alt="Image" src="https://github.com/user-attachments/assets/0fd7ed8b-fbfe-4032-8d3c-d084a82ead73" />
+
 ## Skills Demonstrated
 This project showcases practical skills in:
 -Data Cleaning
