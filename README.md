@@ -46,80 +46,80 @@ Transaction_Date	  Date of the transaction
 
 The raw dataset contained several realistic data quality problems commonly encountered in production environments, including:
 
-#####Missing values
-#####Invalid placeholder values (UNKNOWN, ERROR)
-#####Incorrect data types
-####Numerical fields stored as text
-####Missing transaction dates
-####Inconsistent categorical values
-#####Potential duplicate records
-#####Incomplete transactional information requiring reconstruction
+-Missing values
+-Invalid placeholder values (UNKNOWN, ERROR)
+-Incorrect data types
+-Numerical fields stored as text
+-Missing transaction dates
+-Inconsistent categorical values
+-Potential duplicate records
+-Incomplete transactional information requiring reconstruction
 
 ## Data Cleaning Process
 
 The dataset was cleaned through the following structured workflow:
 
-#####1. Data Inspection
+1. Data Inspection
 Loaded the dataset
 Examined dataset dimensions
 Reviewed data types
 Generated descriptive statistics
 Assessed missing values
-##### 2. Data Standardisation
+ 2. Data Standardisation
 Standardised column names
 Removed unnecessary columns
 Improved dataset consistency
-##### 3. Handling Invalid Values
+3. Handling Invalid Values
 Replaced placeholder values such as:
 UNKNOWN and ERROR with proper missing values (NaN) for accurate processing.
-#####4. Data Type Conversion
+4. Data Type Conversion
 Converted columns into their appropriate data types:
-Numeric columns → Float
-Dates → Datetime
+-Numeric columns → Float
+-Dates → Datetime
 Categorical columns → String
-#####5. Intelligent Missing Value Treatment
+5. Intelligent Missing Value Treatment
 Instead of immediately using statistical imputation, missing numerical values were reconstructed using business logic:
-Total_Spent = Quantity × Price_Per_Unit
-Price_Per_Unit = Total_Spent ÷ Quantity
-Quantity = Total_Spent ÷ Price_Per_Unit
+-Total_Spent = Quantity × Price_Per_Unit
+-Price_Per_Unit = Total_Spent ÷ Quantity
+-Quantity = Total_Spent ÷ Price_Per_Unit
 Any remaining missing numerical values were then imputed using the median to minimise the influence of skewed distributions.
 Categorical variables were completed using the mode, while missing dates were imputed using the median transaction date.
-##### 6. Data Validation
+6. Data Validation
 Performed additional quality assurance by verifying:
-Missing values
-Duplicate records
-Numerical consistency
-Logical relationships between variables
-Valid value ranges
+-Missing values
+-Duplicate records
+-Numerical consistency
+-Logical relationships between variables
+-Valid value ranges
 
 ### Technologies Used
-######Python
-######Pandas
-######NumPy
-######Jupyter Notebook
+-Python
+-Pandas
+-NumPy
+-Jupyter Notebook
 
 ### Project Outcome
 After completing the preprocessing workflow:
-######All missing values were successfully handled
-#####Invalid placeholder entries were removed
-#####Data types were corrected
-#####Numerical inconsistencies were resolved
-#####Duplicate records were checked
-#####The dataset was validated for analytical use
+-All missing values were successfully handled
+-Invalid placeholder entries were removed
+-Data types were corrected
+-Numerical inconsistencies were resolved
+-Duplicate records were checked
+-The dataset was validated for analytical use
 
 The resulting dataset is clean, consistent, and ready for business analytics, dashboard creation, statistical modelling, or machine learning applications.
 
 ## Skills Demonstrated
 This project showcases practical skills in:
-#####Data Cleaning
-#####Data Preprocessing
-#####Data Validation
-#####Data Quality Assessment
-#####Missing Value Imputation
-#####Business Rule Engineering
-#####Data Type Conversion
-#####Feature Preparation
-#####Python Programming
-#####Pandas
-#####NumPy
-#####Analytical Problem Solving
+-Data Cleaning
+-Data Preprocessing
+-Data Validation
+-Data Quality Assessment
+-Missing Value Imputation
+-Business Rule Engineering
+-Data Type Conversion
+-Feature Preparation
+-Python Programming
+-Pandas
+-NumPy
+-Analytical Problem Solving
