@@ -23,14 +23,16 @@ Business decision-making
 
 The primary objectives of this project were to:
 
-#####-Identify common data quality issues in transactional sales data
-#####-Apply systematic data cleaning techniques using Python
-#####-Improve data consistency and reliability
-#####-Preserve business logic during preprocessing
-#####-Produce an analysis-ready dataset suitable for downstream analytics
+-Identify common data quality issues in transactional sales data
+-Apply systematic data cleaning techniques using Python
+-Improve data consistency and reliability
+-Preserve business logic during preprocessing
+-Produce an analysis-ready dataset suitable for downstream analytics
 
 ## Dataset
 The dataset contains transactional records from a café, with each row representing a customer purchase.
+<img width="939" height="482" alt="Image" src="https://github.com/user-attachments/assets/e1774512-b0bf-494b-a2e9-3d52574efdde" />
+
 
 ######Column             ######Description
 Transaction_ID:     Unique identifier for each transaction
