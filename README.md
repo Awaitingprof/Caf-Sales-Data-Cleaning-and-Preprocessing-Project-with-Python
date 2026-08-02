@@ -34,15 +34,15 @@ The dataset contains transactional records from a café, with each row represent
 <img width="939" height="482" alt="Image" src="https://github.com/user-attachments/assets/e1774512-b0bf-494b-a2e9-3d52574efdde" />
 
 
-######Column             ######Description
-Transaction_ID:     Unique identifier for each transaction
-Item	              Product purchased by the customer
-Quantity	          Number of items purchased
-Price_Per_Unit    	Cost of a single item
-Total_Spent	        Total amount paid for the transaction
-Payment_Method	    Payment method used by the customer
-Location	          Café branch where the purchase occurred
-Transaction_Date	  Date of the transaction
+######Column######            ######Description######
+- Transaction_ID:     Unique identifier for each transaction
+- Item	              Product purchased by the customer
+- Quantity	          Number of items purchased
+- Price_Per_Unit    	Cost of a single item
+- Total_Spent	        Total amount paid for the transaction
+- Payment_Method	    Payment method used by the customer
+- Location	          Café branch where the purchase occurred
+- Transaction_Date	  Date of the transaction
 
 ## Data Quality Issues Identified
 
@@ -62,15 +62,15 @@ The raw dataset contained several realistic data quality problems commonly encou
 The dataset was cleaned through the following structured workflow:
 
 1. Data Inspection
-Loaded the dataset
-Examined dataset dimensions
-Reviewed data types
-Generated descriptive statistics
-Assessed missing values
+- Loaded the dataset
+- Examined dataset dimensions
+- Reviewed data types
+- Generated descriptive statistics
+- Assessed missing values
  2. Data Standardisation
-Standardised column names
-Removed unnecessary columns
-Improved dataset consistency
+- Standardised column names
+- Removed unnecessary columns
+- Improved dataset consistency
 3. Handling Invalid Values
 Replaced placeholder values such as:
 UNKNOWN and ERROR with proper missing values (NaN) for accurate processing.
@@ -78,13 +78,12 @@ UNKNOWN and ERROR with proper missing values (NaN) for accurate processing.
 Converted columns into their appropriate data types:
 - Numeric columns → Float
 - Dates → Datetime
-Categorical columns → String
+- Categorical columns → String
 5. Intelligent Missing Value Treatment
 Instead of immediately using statistical imputation, missing numerical values were reconstructed using business logic:
 - Total_Spent = Quantity × Price_Per_Unit
 - Price_Per_Unit = Total_Spent ÷ Quantity
 - Quantity = Total_Spent ÷ Price_Per_Unit
-Any remaining missing numerical values were then imputed using the median to minimise the influence of skewed distributions.
 Categorical variables were completed using the mode, while missing dates were imputed using the median transaction date.
 6. Data Validation
 Performed additional quality assurance by verifying:
