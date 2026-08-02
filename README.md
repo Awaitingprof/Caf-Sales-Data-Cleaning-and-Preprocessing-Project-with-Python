@@ -34,7 +34,7 @@ The dataset contains transactional records from a café, with each row represent
 <img width="939" height="482" alt="Image" src="https://github.com/user-attachments/assets/e1774512-b0bf-494b-a2e9-3d52574efdde" />
 
 
-### Column            ### Description
+### Column            Description
 - Transaction_ID:     Unique identifier for each transaction
 - Item	              Product purchased by the customer
 - Quantity	          Number of items purchased
