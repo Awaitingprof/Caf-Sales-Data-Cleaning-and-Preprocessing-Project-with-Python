@@ -23,11 +23,11 @@ Business decision-making
 
 The primary objectives of this project were to:
 
--Identify common data quality issues in transactional sales data
--Apply systematic data cleaning techniques using Python
--Improve data consistency and reliability
--Preserve business logic during preprocessing
--Produce an analysis-ready dataset suitable for downstream analytics
+- Identify common data quality issues in transactional sales data
+- Apply systematic data cleaning techniques using Python
+- Improve data consistency and reliability
+- Preserve business logic during preprocessing
+- Produce an analysis-ready dataset suitable for downstream analytics
 
 ## Dataset
 The dataset contains transactional records from a café, with each row representing a customer purchase.
@@ -48,14 +48,14 @@ Transaction_Date	  Date of the transaction
 
 The raw dataset contained several realistic data quality problems commonly encountered in production environments, including:
 
--Missing values
--Invalid placeholder values (UNKNOWN, ERROR)
--Incorrect data types
--Numerical fields stored as text
--Missing transaction dates
--Inconsistent categorical values
--Potential duplicate records
--Incomplete transactional information requiring reconstruction
+- Missing values
+- Invalid placeholder values (UNKNOWN, ERROR)
+- Incorrect data types
+- Numerical fields stored as text
+- Missing transaction dates
+- Inconsistent categorical values
+- Potential duplicate records
+- Incomplete transactional information requiring reconstruction
 
 ## Data Cleaning Process
 
@@ -76,38 +76,38 @@ Replaced placeholder values such as:
 UNKNOWN and ERROR with proper missing values (NaN) for accurate processing.
 4. Data Type Conversion
 Converted columns into their appropriate data types:
--Numeric columns → Float
--Dates → Datetime
+- Numeric columns → Float
+- Dates → Datetime
 Categorical columns → String
 5. Intelligent Missing Value Treatment
 Instead of immediately using statistical imputation, missing numerical values were reconstructed using business logic:
--Total_Spent = Quantity × Price_Per_Unit
--Price_Per_Unit = Total_Spent ÷ Quantity
--Quantity = Total_Spent ÷ Price_Per_Unit
+- Total_Spent = Quantity × Price_Per_Unit
+- Price_Per_Unit = Total_Spent ÷ Quantity
+- Quantity = Total_Spent ÷ Price_Per_Unit
 Any remaining missing numerical values were then imputed using the median to minimise the influence of skewed distributions.
 Categorical variables were completed using the mode, while missing dates were imputed using the median transaction date.
 6. Data Validation
 Performed additional quality assurance by verifying:
--Missing values
--Duplicate records
--Numerical consistency
--Logical relationships between variables
--Valid value ranges
+- Missing values
+- Duplicate records
+- Numerical consistency
+- Logical relationships between variables
+- Valid value ranges
 
 ### Technologies Used
--Python
--Pandas
--NumPy
--Jupyter Notebook
+- Python
+- Pandas
+- NumPy
+- Jupyter Notebook
 
 ### Project Outcome
 After completing the preprocessing workflow:
--All missing values were successfully handled
--Invalid placeholder entries were removed
--Data types were corrected
--Numerical inconsistencies were resolved
--Duplicate records were checked
--The dataset was validated for analytical use
+- All missing values were successfully handled
+- Invalid placeholder entries were removed
+- Data types were corrected
+- Numerical inconsistencies were resolved
+- Duplicate records were checked
+- The dataset was validated for analytical use
 
 The resulting dataset is clean, consistent, and ready for business analytics, dashboard creation, statistical modelling, or machine learning applications.
 
@@ -115,15 +115,15 @@ The resulting dataset is clean, consistent, and ready for business analytics, da
 
 ## Skills Demonstrated
 This project showcases practical skills in:
--Data Cleaning
--Data Preprocessing
--Data Validation
--Data Quality Assessment
--Missing Value Imputation
--Business Rule Engineering
--Data Type Conversion
--Feature Preparation
--Python Programming
--Pandas
--NumPy
--Analytical Problem Solving
+- Data Cleaning
+- Data Preprocessing
+- Data Validation
+- Data Quality Assessment
+- Missing Value Imputation
+- Business Rule Engineering
+- Data Type Conversion
+- Feature Preparation
+- Python Programming
+- Pandas
+- NumPy
+- Analytical Problem Solving
